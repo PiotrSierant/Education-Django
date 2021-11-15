@@ -3,9 +3,9 @@ from django.utils import timezone
 from .models import Post
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
+from django.forms import ImgForm
 from django.views.generic import DetailView
 from django.views.generic import TemplateView
-from django.forms import ImgForm
 
 
 class Image(TemplateView):
