@@ -8,6 +8,17 @@
 
 <body>
     <h1>FirstApp</h1>
+    {% for post in posts %}
+    <div>
+        <h2><a href=""> {{ post.title }} </a></h2>
+    </div>
+    <div>
+        <h3>{{ post.text|linebreaksbr }}</h3>
+    </div>
+    <div>
+        <p>Opublikowany: {{ post.publish_date }}</p>
+    </div>
+    {% endfor %}
 </body>
 
 </html>
