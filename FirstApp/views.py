@@ -18,7 +18,7 @@ class Image(TemplateView):
             obj = form.save()
             return HttpResponseRedirect(reverse_lazy('image_display', kwargs={'pk': obj.id}))
 
-        context = self.get_contaxt_data(form=form)
+        context = self.get_context_data(form=form)
         return self.render_to_response(context)
 
     def get(self, request, *args, **kwargs):
