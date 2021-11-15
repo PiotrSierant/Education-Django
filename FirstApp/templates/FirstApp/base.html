@@ -1,0 +1,36 @@
+{% load static %}
+<html lang='pl'>
+
+<head>
+    <meta charset="UTF-8">
+    <title>FirstApp by Piotr Sierant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/FirstApp.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Road+Rage&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class='header'>
+        <h1 class="logo">FIRST_APP</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="col-6 col-md-4">
+                <div class='posty'>
+                    <h2><a href=""> Tu cos bedzie </a></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

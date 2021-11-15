@@ -1,24 +1,14 @@
-<!DOCTYPE html>
-<html lang='pl'>
-
-<head>
-    <meta charset="UTF-8">
-    <title>FirstApp by Piotr Sierant</title>
-</head>
-
-<body>
-    <h1>FirstApp</h1>
-    {% for post in posts %}
-    <div>
-        <h2><a href=""> {{ post.title }} </a></h2>
-    </div>
-    <div>
-        <h3>{{ post.text|linebreaksbr }}</h3>
-    </div>
-    <div>
-        <p>Opublikowany: {{ post.publish_date }}</p>
-    </div>
-    {% endfor %}
-</body>
-
-</html>
+{% extends 'FirstApp/base.html' %}
+{% block content %}
+{% for post in posts %}
+<div class='posty'>
+    <h2><a href=""> {{ post.title }} </a></h2>
+</div>
+<div class='text_class'>
+    <h5>{{ post.text|linebreaksbr }}</h3>
+</div>
+<div>
+    <p class='public'>Opublikowany: {{ post.publish_date }}</p>
+</div>
+{% endfor %}
+{% endblock %}
