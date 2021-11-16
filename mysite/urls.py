@@ -25,6 +25,8 @@ urlpatterns = [
     path('image/', Image.as_view(), name='image'),
     path('image/<int:pk>/', ImageDisplay.as_view(), name='image_display'),
 ]
+handler404 = 'FirstApp.views.error_404_view'
+handler500 = 'FirstApp.views.error_500_view'
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

@@ -16,6 +16,7 @@
 
 <body>
     <div class='header'>
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
         <h1 class="logo">FIRST_APP</h1>
     </div>
     <div class="container">
@@ -24,12 +25,8 @@
                 {% block content %}
                 {% endblock %}
             </div>
-            <div class="col-6 col-md-4">
-                <div class='posty'>
-                    <h2><a href=""> Tu cos bedzie </a></h2>
-                </div>
-            </div>
         </div>
+    </div>
     </div>
 </body>
 
