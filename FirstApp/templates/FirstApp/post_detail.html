@@ -14,6 +14,8 @@
     {% if post.publish_date %}
     <div class="public">
         {{ post.publish_date}}
+        <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span
+                class="glyphicon glyphicon-pencil"></span></a>
     </div>
     {% endif %}
 

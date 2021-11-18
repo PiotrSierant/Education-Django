@@ -15,13 +15,17 @@
 </head>
 
 <body>
-    <div class='header'>
-        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        <h1 class="logo">FIRST_APP</h1>
+    <div class="header">
+        <nav class="navbar navbar-dark bg-dark">
+            <!-- Navbar content -->
+            <p class='logo'>FirstApp</p>
+        </nav>
+    </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-8">
+                <a href="{% url 'post_new' %}"></a>
                 {% block content %}
                 {% endblock %}
             </div>
