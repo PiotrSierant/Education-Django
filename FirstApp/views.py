@@ -31,6 +31,10 @@ class ImageDisplay(DetailView):
     context_object_name = 'image'
 
 
+def base(request):
+    return render(request, 'FirstApp/base.html', data)
+
+
 def post_list(request):
     posts = Post.objects.filter(
         publish_date__lte=timezone.now()).order_by('publish_date')
