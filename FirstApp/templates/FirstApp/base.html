@@ -22,6 +22,14 @@
 </head>
 
 <body>
+    <video playsinline autoplay muted loop poster="background.jpg" id="bgvid">
+        <source src="/media/images/myVid.mp4" type="video/mp4">
+    </video>
+    <header class="viewport-header">
+        <h1>
+            <a href="{% url 'base' %}" class="baselogo"> FirstApp by Piotr Sierant</a>
+        </h1>
+    </header>
     <div class="header">
         <div class="container">
             <nav class="navbar navbar-expand-sm navbar-dark">
