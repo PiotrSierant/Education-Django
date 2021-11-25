@@ -1,18 +1,40 @@
 {% extends 'FirstApp/base.html' %}
 {% block content %}
-{% for post in posts %}
-<div class='posty'>
-    <h2><a href="{% url 'post_detail' pk=post.pk %}"> {{ post.title }} </a></h2>
-</div>
-<div class='text_class'>
-    {% if post.image %}
-    <img src="{{ post.image.url }}" alt="image" width="200px">
-    {% endif %}
-    {{ post.text|linebreaksbr }}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+
+
+            {% for post in posts %}
+            <div class='post'>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}" class='title'> {{ post.title }} </a></h2>
+            </div>
+            <div class='post_text'>
+                {% if post.image %}
+                <img class='img_post' src="{{ post.image.url }}" alt="image" width="200px">
+                {% endif %}
+                {{ post.text|linebreaksbr }}
+            </div>
+            <div>
+                <p class='public'>Opublikowany: {{ post.publish_date }}</p>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="col-sm-4">
+            <div class='post'>
+                <h2><a href="#" class='title'>Elooooo! Mordy.</a></h2>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">I kolumna</div>
+        <div class="col-sm">II kolumna</div>
+        <div class="col-sm">III kolumna</div>
+    </div>
 </div>
 
-<div>
-    <p class='public'>Opublikowany: {{ post.publish_date }}</p>
-</div>
-{% endfor %}
 {% endblock %}

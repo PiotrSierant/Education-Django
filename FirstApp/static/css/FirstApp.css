@@ -1,7 +1,4 @@
 body {
-    margin: 0;
-    background-position: center top;
-    background-size: 100% auto;
     background-color: #262626;
     color: whitesmoke;
     font-family: 'Roboto', sans-serif;
@@ -17,13 +14,15 @@ body {
 }
 
 .baselogo {
-    font-family: 'Road Rage', cursive;
     color: #05F240;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .baselogo:hover {
-    color: #16592E;
+    color: #198754;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 /* menu */
@@ -56,84 +55,42 @@ a.nav-link {
     padding-right: 2px;
 }
 
-.btn-success {
-    background-color: #05F240;
-    color: #16592E;
-    border: none;
-}
-
-.btn-success:hover {
-    background-color: #16592E;
+.btn-outline-success:active, .btn-outline-success:visited, .btn-outline-success {
+    border-color: #05F240;
     color: #05F240;
 }
 
-
-
-.cialo {
-    margin-top: 100px;
+.post {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-h1 {
-    color: #08A630;
-}
-
-h5 {
-    color: #F2E4D8;
-}
-
-h2 a, h2 a:active, h2 a:visited {
-    color: #16592E;
+.title {
     text-decoration: none;
+    color: #05F240;
 }
 
-
-.posty {
-    padding-top: 20px;
-    padding-left: 20px;
-}
-
-.text_class {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    font-size: 12px;
-    font-family: 'Cormorant Garamond', serif;
-    float: left;
+.title:hover {
+    color: #198754;
+    text-decoration: none;
 }
 
 .public {
-    color:#F2E4D8;
+    color:#cccccb;
     font-size: 12px;
     font-family: 'Cormorant Garamond', serif;
-    padding-left: 20px;
 }
-
-.newpost {
-    text-decoration: none;
-    font-family: 'Road Rage', cursive;
-    color: #05F240;
-    font-size: 25px;
+.img_post {
+    float:left;
+    padding-bottom: 10px;
     padding-right: 20px;
-    margin: auto;
+}
+.post_text{
+    float: right;
+    text-justify: auto;
+    text-align: justify;
 }
 
-video {
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-
-.viewport-header {
-    position: relative;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-family: 'Road Rage', cursive;
-    color: #05F240;
-  }
+.marginesik {
+    margin-top: 90px;
+}
